@@ -1,0 +1,50 @@
+\documentclass{letter}
+
+\usepackage{hyperref}
+\usepackage[margin=3cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+
+% Sender
+\newcommand{\sendername}{John Doe}
+\newcommand{\senderaddress}{Orange Drive, Apt. 404 \\ Appletown, FL 13523}
+\newcommand{\senderphone}{752-203-9849}
+\newcommand{\senderemail}{johndoe@coolmail.com}
+\newcommand{\senderwebsite}{johndoedesigns.com}
+
+% Company
+\newcommand{\attn}{Hiring Manager}
+\newcommand{\addressedto}{Hiring Manager}
+\newcommand{\company}{Cool Company}
+\newcommand{\position}{Cool Engineer}
+
+\address{\senderaddress \\ \\
+         \faPhone \hspace{1pt} \senderphone \vspace{2pt} \\
+         \faEnvelope~\href{mailto:\senderemail}{\underline{\senderemail}} \vspace{2pt} \\
+         \faGlobe \hspace{1pt} \href{https://\senderwebsite}{\underline{\senderwebsite}} \\
+         \vspace{10pt}}
+
+\longindentation=0pt
+
+\begin{document}
+    \begin{letter}{\textbf{Attn:} \attn, \company}
+    
+        \opening{Dear \addressedto:}
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum posuere mauris, ac fringilla magna. Fusce efficitur lobortis porta. I am excited to apply for the \textbf{\position} position at \company.
+        
+        Nunc sollicitudin convallis felis, ut placerat lacus hendrerit quis. Sed non purus efficitur, mattis mi vitae, accumsan justo. Vestibulum ac placerat nisi, eget suscipit elit. Duis vel erat a eros interdum lacinia. Aenean id massa eu velit scelerisque molestie volutpat sodales lectus. Maecenas dolor elit, sollicitudin eu ultrices nec, molestie vitae mi. Duis vel orci in enim tincidunt interdum id sit amet est. Donec in iaculis magna, non dignissim enim. Phasellus eget tristique sapien, eget porttitor odio. Ut ut congue mauris. Phasellus rhoncus convallis mi eu blandit. Nam posuere tempus mollis. Proin ac arcu non purus mattis tincidunt sed vitae enim. Donec vestibulum facilisis est, non semper arcu. Quisque in pellentesque ante. In convallis interdum nisi, eu sollicitudin urna fringilla hendrerit.
+        
+        Cras blandit fermentum luctus. Praesent id rhoncus libero, nec varius metus. Sed commodo tempus finibus. Quisque rhoncus ex diam, et viverra neque pharetra vel. Donec interdum nulla ut laoreet blandit. 
+        
+        Aliquam vestibulum, sapien ut pharetra tempus, sem ipsum congue erat, sit amet cursus neque eros vel lectus. Nunc lacinia convallis orci. Nunc pulvinar commodo massa sit amet facilisis.
+        
+        \closing{Sincerely,\\
+                 \fromsig{\includegraphics[scale=0.25]{signature.png}} \vspace{-2pt} \\
+                 \fromname{\sendername}}
+        
+        \vspace{-50pt}
+        \encl{Resume}
+    
+    \end{letter}
+\end{document}
